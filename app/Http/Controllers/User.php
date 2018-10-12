@@ -19,10 +19,12 @@ class User extends Controller
     {
 //        $data = ModelUser::all();
 //        return view('user', compact('data'));
+
+        $data['user'] = ModelUser::where('email', Session::get('email'))->first();
         if (!Session::get('login')) {
             return redirect('/login')->with('alert', 'Kamu harus login dulu');
         } else {
-            return view('dashboard');
+            return view('dashboard', $data);
         }
     }
 
@@ -36,7 +38,7 @@ class User extends Controller
                 Session::put('name', $data->name);
                 Session::put('email', $data->email);
                 Session::put('login', TRUE);
-                return redirect('/');
+                return redirect('/')->with('data', $data);
             } else {
                 return redirect('/login')->with('alert','Password atau Email, Salah!'.
                     Hash::check($password, $data->password));
