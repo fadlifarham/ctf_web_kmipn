@@ -76,9 +76,11 @@
             <section class="content">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="nav-tabs-custom">
-                        <div class="tab-content">
-                            <span class="username">Selamat Datang Tim {{ $user->username }}</span>
+                    <div class="col-lg-1">
+                        <div class="nav-tabs-custom">
+                            <div class="tab-content">
+                                <span class="username">Selamat Datang Tim {{ $user->username }}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
