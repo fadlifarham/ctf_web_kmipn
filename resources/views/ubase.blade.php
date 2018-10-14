@@ -40,6 +40,11 @@
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <style>
+        a.gbs {
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
 <div class="wrapper">
@@ -82,21 +87,21 @@
                 <li class="header">MAIN NAVIGATION</li>
 
                 <li class="active">
-                    <a href="">
+                    <a href="{{ url('/') }}">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
                 <li class="active">
-                    <a href="">
+                    <a href="{{ url('soal') }}">
                         <i class="fa fa-code"></i>
                         <span>Soal</span>
                     </a>
                 </li>
 
                 <li class="active">
-                    <a href="">
+                    <a href="{{ url('score') }}">
                         <i class="fa fa-percent"></i>
                         <span>Score Board</span>
                     </a>

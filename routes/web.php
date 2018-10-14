@@ -19,3 +19,7 @@ Route::get('/', 'User@index');
 Route::get('/login', 'User@login');;
 Route::post('/loginPost', 'User@loginPost');
 Route::get('/logout', 'User@logout');
+Route::get('/soal', 'PagesController@soal');
+Route::get('/soal/{id_soal}', 'PagesController@viewSoal')->middleware('soal_middleware');
+Route::post('/submit', 'PagesController@submit');
+Route::get('/score', 'PagesController@score');
