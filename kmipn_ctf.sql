@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 20 Okt 2018 pada 02.54
+-- Waktu pembuatan: 20 Okt 2018 pada 03.58
 -- Versi server: 5.7.21-log
 -- Versi PHP: 7.2.2
 
@@ -39,10 +39,10 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(17, '2018_10_11_034645_create_model_users_table', 1),
-(18, '2018_10_14_025545_create_model_soals_table', 1),
-(19, '2018_10_14_031439_create_model_pilihans_table', 1),
-(20, '2018_10_14_090258_create_model_statuses_table', 1);
+(21, '2018_10_11_034645_create_model_users_table', 1),
+(22, '2018_10_14_025545_create_model_soals_table', 1),
+(23, '2018_10_14_031439_create_model_pilihans_table', 1),
+(24, '2018_10_14_090258_create_model_statuses_table', 1);
 
 -- --------------------------------------------------------
 
@@ -76,7 +76,46 @@ INSERT INTO `pilihan` (`id`, `pilihan1`, `pilihan2`, `pilihan3`, `pilihan4`, `pi
 (8, 'Network Topology', 'IDS', 'Packet Fingerprinting', 'Security Management System', 'Firewall', NULL, NULL),
 (9, 'Bluejacking', 'Adware', 'Cookies', 'Internet Worms', 'Mobile Phone Viruse', NULL, NULL),
 (10, 'Virus', 'Spaming', 'Trojan', 'Spam', 'Spyware', NULL, NULL),
-(11, 'Application', 'Proxy Firewall', 'Stateful Inspection Firewall', 'Packet Filter Firewall', 'Application Filter Firewall', NULL, NULL);
+(11, 'Application', 'Proxy Firewall', 'Stateful Inspection Firewall', 'Packet Filter Firewall', 'Application Filter Firewall', NULL, NULL),
+(12, 'Security Management System', 'Network Topology', 'IDS', 'IPS', 'Packet Fingerprinting', NULL, NULL),
+(13, 'Confidentally', 'Integrity', 'Available', 'Non-repudiation', 'Autentication', NULL, NULL),
+(14, 'Access Control', 'Circuit Level Gateway', 'Application Layer Gateway', 'Statefull Multilayer Inspection Firewall', 'Multilayer Inspection Firewall', NULL, NULL),
+(15, 'Destruction', 'Denial', 'Theft', 'Modification', 'Fraud', NULL, NULL),
+(16, 'Network Interface Cards', 'Network Internet Cards', 'Network Interface Computer', 'Network Internet Cards', 'Network Identified Cards', NULL, NULL),
+(17, '1', '2', '3', '5', '4', NULL, NULL),
+(18, 'Firewall', 'Backup', 'IDS', 'Cryptografi', 'CryptoCurrency', NULL, NULL),
+(19, 'Pengecekan koneksi aktif', 'Pengecekan log user', 'Pengecekan log system', 'Pengecekan log pengaksesan service', 'Pengecekan port aktif', NULL, NULL),
+(20, 'Honeypot', 'Configuration', 'Second Server', 'Dedicated Server', 'Game Server', NULL, NULL),
+(21, 'Availability', 'Reliability', 'Confidentially', 'OverView', 'Kehandalan ', NULL, NULL),
+(22, 'Application', 'Session', 'Internet', 'Network', 'Physical', NULL, NULL),
+(23, 'Physical Layer', 'Datalink Layer', 'Aplication Layer', 'Internet Layer', 'Session Layer', NULL, NULL),
+(24, 'Physical Layer', 'Transport Layer', 'Aplication Layer', 'Internet Layer', 'Session Layer', NULL, NULL),
+(25, 'Network Layer', 'Datalink Layer', 'Transport Layer', 'Internet Layer', 'Session Layer', NULL, NULL),
+(26, 'RIP', 'IGRP', 'OSPF', 'IS-IS', 'BGP', NULL, NULL),
+(27, 'Administrator harus handal', 'Tidak bias menangani error jaringan eksternal', 'Routing setiap device bila penambahan device router', 'Tidak cocok jaringan skala besar', 'Memakan bandwith besar', NULL, NULL),
+(28, 'ps -ef', 'ps -f -u user', 'ps -f –pid id', 'top 1', 'px aux –sort', NULL, NULL),
+(29, 'man', 'ls', 'dir', 'pwd', 'route -n', NULL, NULL),
+(30, 'Work-around', 'Patches', 'Updates', 'Install', 'Upgrades', NULL, NULL),
+(31, '32', '64', '128', '16', '8', NULL, NULL),
+(32, 'MAC Filter', 'Change default router password', 'Review log', 'Upgrade Manufacture', 'Turn on WPA dan WPA2 encryption', NULL, NULL),
+(33, 'Passive Data Sniffing', 'Unathorized Access', 'Jamming DoS attack', 'User Hijack', 'Probe', NULL, NULL),
+(34, 'IPsec', 'VTP', 'PPTP', 'ATMP', 'L2TP', NULL, NULL),
+(35, 'Confidentally', 'Authentication', 'Non Repudiation', 'Access Control', 'Integrity', NULL, NULL),
+(36, 'AMaVis', 'ClamAntiVirus', 'Kaspersky', 'AntiVir', 'SpamAssasin', NULL, NULL),
+(37, 'Lack of data origin authentication', 'Lack of non-repudiation', 'Lack of notification of receipt', 'Loss of confidentiality', 'Loss of integrity', NULL, NULL),
+(38, 'OS', 'Account user', 'Internet IP Addrresses', 'File', 'System', NULL, NULL),
+(39, 'Payment Card Information', 'Non-Payment Card Information', 'Intellectual Property', 'Sensitive Company Data', 'Research Value', NULL, NULL),
+(40, 'Active Reconnaissance', 'Passive Reconnaissance', 'Scanning', 'Extract Information', 'Gaining Access', NULL, NULL),
+(41, 'Mendapatkan access system', 'Mengolah system keamanan jaringan', 'Mengenali celah dan menuntaskan permasalahan pada system jaringan', 'Membuat service pada jaringan', 'Membangun system jaringan', NULL, NULL),
+(42, 'Platform Knowledge', 'Network Knowledge', 'Security Knowledge', 'Vulnerability Research', 'Computer Expert', NULL, NULL),
+(43, 'Port Scanning', 'Vulnerability Scanning', 'Network Scanning', 'Hacking', 'Phising', NULL, NULL),
+(44, 'ZenMAP', 'SolarWinds Standar Edition', 'Utility Ping', 'Visual Ping Tester', 'Ping Scanner Pro', NULL, NULL),
+(45, 'Scanning', 'Enumeration', 'Phising', 'Probe', 'Hacking', NULL, NULL),
+(46, 'Electronic Attacks', 'Non-Electronic Attacks', 'Passive Online Attacks', 'Active Online Attacks', 'Offline Attacks', NULL, NULL),
+(47, 'Menggunakan Firewall', 'Hardening Host', 'Menggunakan SSH', 'Menggunakan Ipsec', 'Antivirus', NULL, NULL),
+(48, 'Misuse Detection', 'Anomaly Detection', 'Analisa Header', 'Analisa Payload', 'Log Scanner', NULL, NULL),
+(49, 'IPTABLES -X', 'IPTABLES -t nat -x', 'IPTABLES -T mangle -x', 'IPTABLES -A', 'IPTABLES -t nat -f', NULL, NULL),
+(50, 'SDL Regex Fuzzer', 'WANGuard', 'Arbor Peakflow', 'FortGuard', 'IntrustGuard', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -107,7 +146,47 @@ INSERT INTO `soal` (`id`, `pertanyaan`, `pilihan`, `benar`, `created_at`, `updat
 (7, 'Sistem yang membantu pengamanan jaringan dengan menganalisa data dan membuatkan report', 7, 'Security Management System', NULL, NULL),
 (8, 'Ancaman yang biasa didapati user ketika menjelajahi internet untuk mencuri data user untuk kepentingan marketing disebut', 8, 'Adware', NULL, NULL),
 (9, 'Tindakan penggunaan perangkat elektonik dengan mengirim pesan bertubi-tubi disebut', 9, 'Spaming', NULL, NULL),
-(10, 'Tipe firewall sebagai penjebatan antara koneksi LAN, WAN, dan Internet disebut…', 10, 'Proxy Firewall', NULL, NULL);
+(10, 'Tipe firewall sebagai penjebatan antara koneksi LAN, WAN, dan Internet disebut…', 10, 'Proxy Firewall', NULL, NULL),
+(11, 'Dapat mengetahui peralatan apa saja yang ada dalam sebuah jaringan komputer merupakan fungsi dari …', 11, 'Packet Fingerprinting', NULL, NULL),
+(12, 'Mensyaratkan bahwa informasi (data) hanya bisa diakses oleh pihak yang memiliki wewenang adalah definisi dari …', 12, 'Integrity', NULL, NULL),
+(13, 'Memastikan seseorang memiliki otoritas yg sesuai dengan pihak-pihak yang dapat mengakses informasi definisi dari…', 13, 'Access Control', NULL, NULL),
+(14, 'Jenis firewall paling murah, mudah dan efektif adalah…', 14, 'Packet Filtering Gateway', NULL, NULL),
+(15, 'Usaha untuk merusak system pada jaringan, seperti Trojanhorse, Logicbom, Trapdoor, Virus, Worm dan Zombie disebut ', 15, 'Destruction', NULL, NULL),
+(16, '. Kepanjangan dari NIC adalah…', 16, 'Network Interface Cards', NULL, NULL),
+(17, 'Ada berapakah element pada host hardening…', 17, '5', NULL, NULL),
+(18, 'Berikut ini yang elemen hardening host yang secara umum melakukan otomatisasi terhadap penyusupan menggunakan IDS disebut…', 18, 'IDS', NULL, NULL),
+(19, 'Berikut ini merupakan aktivitas dalam digital forensik, kecuali…', 19, 'Pengecekan port aktif', NULL, NULL),
+(20, 'Server umpan yang digunakan untuk mengelabuhi penyusup disebut…', 20, 'Honeypot', NULL, NULL),
+(21, 'Berikut tujuan keamanan jaringan komputer kecuali…', 21, 'OverView', NULL, NULL),
+(22, 'Berikut ini merupakan layer di OSI layer, kecuali…', 22, 'Internet', NULL, NULL),
+(23, 'Layer yang terdapat penambahan header dengan tail untuk physical addressing adalah…', 23, 'Datalink Layer', NULL, NULL),
+(24, 'Layer yang bertugas untuk menentukan bagaimana mengirim data dengan memecah data menjadi beberapa segment adalah…', 24, 'Transport Layer', NULL, NULL),
+(25, 'Type pengiriman data dari host ke host menggunakan prinsip layer…', 25, 'Network Layer', NULL, NULL),
+(26, 'Berikut ini merupakan yang termasuk IGP, kecuali…', 26, 'BGP', NULL, NULL),
+(27, 'Merupakan kekurangan dari routing statis adalah sebagai berikut, kecuali…', 27, 'Memakan bandwith besar', NULL, NULL),
+(28, 'Perintah terminal yang digunakan untuk melihat proses yang sedang berjalan…', 28, 'ps -ef', NULL, NULL),
+(29, 'Melihat direktori kerja yang pada saat itu aktif dengan menggunakan perintah…', 29, 'pwd', NULL, NULL),
+(30, 'Langkah penyelesaikan suatu vulnerability dengan menambah software baru ke suatu system operasi merupakan tindakan…', 30, 'Patches', NULL, NULL),
+(31, 'Jumlah maximum hope yang bisa dilewati oleh sebuah paket data untuk sampai ke tujuan adalah…', 31, '32', NULL, NULL),
+(32, 'Berikut ini merupakan langkah-langkah untuk mengamankan wireless network, kecuali…', 32, 'Review log', NULL, NULL),
+(33, 'Bagian dari ancaman pada wireless network adalah, kecuali…', 33, 'Probe', NULL, NULL),
+(34, 'Salah satu komponen VPN yang mengamankan pengiriman data melalui TCP/IP adalah…', 34, 'PPTP', NULL, NULL),
+(35, 'Tujuan dari kriptografi adalah membuat data tidak bias berubah, bertambah, atau dirusak adalah…', 35, 'Confidentally', NULL, NULL),
+(36, 'Berikut ini software yang sering dipakai dalam Anti Spam…', 36, 'SpamAssasin', NULL, NULL),
+(37, 'Berikut ini merupakan kerentanan dari email dimana email tidak diketahui kebenaran status terkirim adalah jenis kerentanan…', 37, 'Loss of confidentiality', NULL, NULL),
+(38, '. Attacker dalam melakukan serangan web based sering menggunakan celah error event untuk mendapat informasi…', 38, 'Internet IP Addrresses', NULL, NULL),
+(39, 'Berikut ini target data yang sering dicari oleh attacker adalah, kecuali…', 39, 'Research Value', NULL, NULL),
+(40, 'Fase Hacker untuk menentukan target yang dituju dengan melakukan research target melalui track record melalui internet merupakan…', 40, 'Passive Reconnaissance', NULL, NULL),
+(41, 'Berikut ini merupakan salah satu tugas utama seorang ethical hacker adalah…', 41, 'Mengenali celah dan menuntaskan permasalahan pada system jaringan', NULL, NULL),
+(42, 'Berikut yang bukan skill wajib dari seorang ethical hacker…', 42, 'Vulnerability Research', NULL, NULL),
+(43, 'Usaha attacker untuk untuk mengidentifikasi host yang aktif dalam suatu jaringan kemudian diserang disebut usaha…', 43, 'Network Scanning', NULL, NULL),
+(44, 'Berikut ini yang bukan ping sweep tools…', 44, 'ZenMAP', NULL, NULL),
+(45, 'Proses untuk mendapatkan username, machine name, network resource, dan informasi dari service yang berjalan pada system merupakan…', 45, 'Enumeration', NULL, NULL),
+(46, 'Berikut ini yang bukan termasuk Teknik password attack…', 46, 'Electronic Attacks', NULL, NULL),
+(47, '. Langkah efektif untuk mencegah serangan password cracking adalah…', 47, 'Hardening Host', NULL, NULL),
+(48, 'Metode untuk mendeteksi attack dengan mencocokkan pola attack yang sudah di modelkan adalah…', 48, 'Misuse Detection', NULL, NULL),
+(49, 'Berikut ini sintaks yang benar untuk menghapus aturan iptables adalah…', 49, 'IPTABLES -t nat -f', NULL, NULL),
+(50, 'Berikut ini merupakan tools yang dapat digunakan protect dari serangan DoS / DDoS…', 50, 'IntrustGuard', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -403,8 +482,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `email`, `password`, `score`, `nama_tim`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'user', 'user@kmipn.com', '$2y$10$tMt2H.EM/c5J/bzvnyrvwO/gyF3UoONXPEUb5vJd3LIJX/d8/wTg6', 0, 'hoho team', NULL, NULL, NULL),
-(2, 'user2', 'user2@kmipn.com', '$2y$10$h//StHgZxZ.JAvPFPMCv6e01RXSevYrplb6n86y0tVcay7HfUzx.e', 0, 'Hehe team', NULL, NULL, NULL);
+(1, 'user', 'user@kmipn.com', '$2y$10$NcoePuzsCVIcC0iCeG2L/.t22IGPQXDEOBeKv8sF9zUuq0Uq3XrF.', 0, 'hoho team', NULL, NULL, NULL),
+(2, 'user2', 'user2@kmipn.com', '$2y$10$fiUllktyLrfc6wFgkguPLeyi0zPBOzem6yzszPGB/H7BNMEsnrImu', 0, 'Hehe team', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -448,19 +527,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT untuk tabel `pilihan`
 --
 ALTER TABLE `pilihan`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT untuk tabel `soal`
 --
 ALTER TABLE `soal`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT untuk tabel `status`
