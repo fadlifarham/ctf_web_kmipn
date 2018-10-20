@@ -62,7 +62,7 @@ class PagesController
 
         $score = (int) $user->score;
         if (strcmp($benar, $pilihan_user) == 0) {
-            $score += 100;
+            $score += 2;
             $user->update(['score' => $score]);
         }
 

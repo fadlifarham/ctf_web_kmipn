@@ -16,7 +16,7 @@
                 <div class="col-lg-12">
                     <div class="box box-primary">
                         <div class="box-header">
-                            <h2 class="username">Selamat Datang Tim {{ $user->username }}</h2>
+                            <h2 class="username">Selamat Datang Tim {{ $user->nama_tim }}</h2>
                         </div>
                         <div class="box-body">
                             <div class="col-md-5">
@@ -28,7 +28,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <h3>Peraturan</h3>
+                                <p>* Jika mengalami masalah bisa mengubungi email kmipn2018@gmail.com</p>
                             </div>
                         </div>
                     </div>

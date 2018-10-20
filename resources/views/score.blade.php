@@ -28,7 +28,7 @@
                                     <tbody>
                                         @foreach($user as $sc)
                                             <tr>
-                                                <td>{{ $sc->username }}</td>
+                                                <td>{{ $sc->nama_tim }}</td>
                                                 <td>{{ $sc->score }}</td>
                                             </tr>
                                         @endforeach

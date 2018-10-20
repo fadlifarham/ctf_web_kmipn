@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{ url('assets/dist/css/AdminLTE.min.css') }}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="{{ url('dist/css/skins/_all-skins.min.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/dist/css/skins/_all-skins.min.css') }}">
     <!-- Morris chart -->
     <link rel="stylesheet" href="{{ url('assets/bower_components/morris.js/morris.css') }}">
     <!-- jvectormap -->
@@ -46,80 +46,73 @@
         }
     </style>
 </head>
-<body>
-<div class="wrapper">
-    <header class="main-header">
-        <!-- Logo -->
-        <a href="index2.html" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini"><b>A</b>LT</span>
-            <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Admin</b>LTE</span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top">
-            <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                <span class="sr-only">Toggle navigation</span>
+<body class="sidebar-mini skin-blue">
+    <div class="wrapper">
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="{{ '/' }}" class="logo">
+                <img src="{{ url('img/kmipn.png') }}"/>
             </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
 
-            <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown user user-menu">
-                        <a href="{{ url('logout') }}" class="" data-toggle="">
-                            <i class="fa fa-sign-out"></i>
-                            <span class="">Logout</span>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown user user-menu">
+                            <a href="{{ url('logout') }}" class="" data-toggle="">
+                                <i class="fa fa-sign-out"></i>
+                                <span class="">Logout</span>
+                            </a>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu" data-widget="tree">
+
+                    <li class="header">MAIN NAVIGATION</li>
+
+                    <li class="active">
+                        <a href="{{ url('/') }}">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Dashboard</span>
                         </a>
                     </li>
-                    <!-- Control Sidebar Toggle Button -->
 
+                    <li class="active">
+                        <a href="{{ url('soal') }}">
+                            <i class="fa fa-code"></i>
+                            <span>Soal</span>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="{{ url('score') }}">
+                            <i class="fa fa-percent"></i>
+                            <span>Score Board</span>
+                        </a>
+                    </li>
                 </ul>
-            </div>
-        </nav>
-    </header>
+            </section>
+        </aside>
 
-    <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-            <!-- sidebar menu: : style can be found in sidebar.less -->
-            <ul class="sidebar-menu" data-widget="tree">
+        @yield('content')
 
-                <li class="header">MAIN NAVIGATION</li>
-
-                <li class="active">
-                    <a href="{{ url('/') }}">
-                        <i class="fa fa-dashboard"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-
-                <li class="active">
-                    <a href="{{ url('soal') }}">
-                        <i class="fa fa-code"></i>
-                        <span>Soal</span>
-                    </a>
-                </li>
-
-                <li class="active">
-                    <a href="{{ url('score') }}">
-                        <i class="fa fa-percent"></i>
-                        <span>Score Board</span>
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </aside>
-
-    @yield('content')
-
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.0
-        </div>
-        <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
-        reserved.
-    </footer>
-</div>
+        <footer class="main-footer">
+            <strong>KMIPN 2018</strong>
+        </footer>
+    </div>
 
     <!-- jQuery 3 -->
     <script src="{{ url('assets/bower_components/jquery/dist/jquery.min.js') }}"></script>
